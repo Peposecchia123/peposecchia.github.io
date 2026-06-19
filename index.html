@@ -23,10 +23,27 @@ body {
     overflow: hidden;
 }
 
+.grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.10;
+    background-image:
+        repeating-radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.25) 0px,
+            rgba(255,255,255,0.25) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 
 h1 {
@@ -34,14 +51,16 @@ h1 {
     font-size: 64px;
     font-weight: 300;
     letter-spacing: 3px;
-    color: #a8a8a8;
+    color: #b5b5b5;
     opacity: 0;
+
     animation:
         fadeIn 2s ease forwards,
         floatText 6s ease-in-out infinite;
+
     text-shadow:
-        0 0 2px rgba(255,255,255,0.08),
-        0 0 12px rgba(255,255,255,0.04);
+        0 0 2px rgba(255,255,255,0.10),
+        0 0 18px rgba(255,255,255,0.06);
 }
 
 .links {
@@ -49,25 +68,26 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+
     opacity: 0;
     animation: fadeIn 2s ease forwards;
     animation-delay: 1s;
 }
 
 .links a {
-    color: #7f8a96;
+    color: #b3bec9;
     text-decoration: underline;
     text-underline-offset: 4px;
-    border: 1px solid rgba(127,138,150,0.45);
+    border: 1px solid rgba(179,190,201,0.70);
     border-radius: 4px;
     padding: 12px 24px;
     transition: all 0.2s ease;
 }
 
 .links a:hover {
-    color: #c5cdd6;
-    border-color: #c5cdd6;
-    transform: translateY(-1px);
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -76,44 +96,37 @@ h1 {
     left: 0;
     right: 0;
     text-align: center;
+    z-index: 2;
 }
 
 .footer a {
-    color: #7a7a7a;
-    opacity: 0.5;
+    color: #b0b0b0;
+    opacity: 0.8;
     letter-spacing: 8px;
     text-decoration: none;
 }
 
 .footer a:hover {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes floatText {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
 }
 </style>
 
 </head>
 
 <body>
+
+<div class="grain"></div>
 
 <div class="container">
 
