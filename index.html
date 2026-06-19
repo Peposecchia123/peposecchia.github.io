@@ -31,7 +31,9 @@ h1 {
     margin: 0 0 30px 0;
     font-size: 64px;
     font-weight: 300;
-    color: #d8d8d8;
+    color: #d4d4d4;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px rgba(255,255,255,0.15);
 }
 
 .links a {
@@ -39,15 +41,16 @@ h1 {
     margin: 8px;
     padding: 12px 24px;
     text-decoration: none;
-    color: #d0d0d0;
-    border: 1px solid #d0d0d0;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
     border-radius: 4px;
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 .links a:hover {
-    background: #d0d0d0;
+    background: #cfcfcf;
     color: black;
+    transform: scale(1.05);
 }
 
 .footer {
@@ -55,9 +58,21 @@ h1 {
     bottom: 20px;
     left: 0;
     right: 0;
-    color: #c8c8c8;
+    color: #bfbfbf;
     opacity: 0.7;
     letter-spacing: 6px;
+}
+
+.grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image:
+        radial-gradient(circle at 20% 20%, white 1px, transparent 1px),
+        radial-gradient(circle at 80% 40%, white 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, white 1px, transparent 1px),
+        radial-gradient(circle at 60% 60%, white 1px, transparent 1px);
 }
 </style>
 
@@ -65,19 +80,31 @@ h1 {
 
 <body>
 
+<div class="grain"></div>
+
 <div class="container">
 
 ```
 <h1>pepo secchia</h1>
 
 <div class="links">
-    <a href="https://open.spotify.com/artist/5Co9emLnmFyRHIT4xBQ8Lg" target="_blank">spotify</a>
 
-    <a href="https://music.apple.com/us/artist/pepo-secchia/1420857837" target="_blank">apple music</a>
+    <a href="https://open.spotify.com/artist/5Co9emLnmFyRHIT4xBQ8Lg" target="_blank">
+        ↗ spotify
+    </a>
 
-    <a href="https://www.youtube.com/@peposecchia" target="_blank">youtube</a>
+    <a href="https://music.apple.com/us/artist/pepo-secchia/1420857837" target="_blank">
+        ↗ apple music
+    </a>
 
-    <a href="https://www.instagram.com/peposecchia" target="_blank">instagram</a>
+    <a href="https://www.youtube.com/@peposecchia" target="_blank">
+        ↗ youtube
+    </a>
+
+    <a href="https://www.instagram.com/peposecchia" target="_blank">
+        ↗ instagram
+    </a>
+
 </div>
 ```
 
