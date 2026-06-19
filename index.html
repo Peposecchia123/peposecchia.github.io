@@ -22,7 +22,6 @@ body{
     background-size:cover;
     background-position:center;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     position:relative;
@@ -43,12 +42,13 @@ body{
 h1{
     font-size:4rem;
     letter-spacing:4px;
-    margin-bottom:10px;
+    margin-bottom:30px;
 }
 
-p{
-    font-size:1.2rem;
-    margin-bottom:30px;
+.links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .links a{
@@ -66,11 +66,6 @@ p{
     background:white;
     color:black;
 }
-
-footer{
-    padding:20px;
-    color:#999;
-}
 </style>
 
 </head>
@@ -83,9 +78,8 @@ footer{
 ```
     <h1>PEPO SECCHIA</h1>
 
-    <p>Official Artist Website</p>
-
     <div class="links">
+
         <a href="https://open.spotify.com/artist/5Co9emLnmFyRHIT4xBQ8Lg" target="_blank">
             Spotify
         </a>
@@ -93,16 +87,21 @@ footer{
         <a href="https://music.apple.com/us/artist/pepo-secchia/1420857837" target="_blank">
             Apple Music
         </a>
+
+        <a href="https://www.instagram.com/peposecchia" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://www.youtube.com/@peposecchia" target="_blank">
+            YouTube
+        </a>
+
     </div>
 
 </div>
 ```
 
 </div>
-
-<footer>
-© 2025 Pepo Secchia
-</footer>
 
 </body>
 </html>
