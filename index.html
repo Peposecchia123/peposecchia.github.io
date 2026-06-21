@@ -23,27 +23,10 @@ body {
     overflow: hidden;
 }
 
-.grain {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.10;
-    background-image:
-        repeating-radial-gradient(
-            circle at center,
-            rgba(255,255,255,0.25) 0px,
-            rgba(255,255,255,0.25) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-}
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
 }
 
 h1 {
@@ -51,7 +34,7 @@ h1 {
     font-size: 64px;
     font-weight: 300;
     letter-spacing: 3px;
-    color: #b5b5b5;
+    color: #a8a8a8;
     opacity: 0;
 
     animation:
@@ -59,8 +42,8 @@ h1 {
         floatText 6s ease-in-out infinite;
 
     text-shadow:
-        0 0 2px rgba(255,255,255,0.10),
-        0 0 18px rgba(255,255,255,0.06);
+        0 0 2px rgba(255,255,255,0.08),
+        0 0 12px rgba(255,255,255,0.04);
 }
 
 .links {
@@ -75,19 +58,19 @@ h1 {
 }
 
 .links a {
-    color: #b3bec9;
+    color: #7f8a96;
     text-decoration: underline;
     text-underline-offset: 4px;
-    border: 1px solid rgba(179,190,201,0.70);
+    border: 1px solid rgba(127,138,150,0.45);
     border-radius: 4px;
     padding: 12px 24px;
     transition: all 0.2s ease;
 }
 
 .links a:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-    transform: translateY(-2px);
+    color: #c5cdd6;
+    border-color: #c5cdd6;
+    transform: translateY(-1px);
 }
 
 .footer {
@@ -96,29 +79,38 @@ h1 {
     left: 0;
     right: 0;
     text-align: center;
-    z-index: 2;
 }
 
 .footer a {
-    color: #b0b0b0;
-    opacity: 0.8;
+    color: #7a7a7a;
+    opacity: 0.5;
     letter-spacing: 8px;
     text-decoration: none;
 }
 
 .footer a:hover {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes floatText {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-3px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 </style>
 
@@ -126,28 +118,34 @@ h1 {
 
 <body>
 
-<div class="grain"></div>
-
 <div class="container">
 
 <h1>pepo secchia</h1>
 
 <div class="links">
 
-<a href="https://open.spotify.com/artist/5Co9emLnmFyRHIT4xBQ8Lg" target="_blank">spotify</a>
+<a href="https://open.spotify.com/artist/5Co9emLnmFyRHIT4xBQ8Lg" target="_blank">
+spotify
+</a>
 
-<a href="https://music.apple.com/us/artist/pepo-secchia/1420857837" target="_blank">apple music</a>
+<a href="https://music.apple.com/us/artist/pepo-secchia/1420857837" target="_blank">
+apple music
+</a>
 
-<a href="https://www.youtube.com/@peposecchia" target="_blank">youtube</a>
+<a href="https://www.youtube.com/@peposecchia" target="_blank">
+youtube
+</a>
 
-<a href="https://www.instagram.com/peposecchia" target="_blank">instagram</a>
+<a href="https://www.instagram.com/peposecchia" target="_blank">
+instagram
+</a>
 
 </div>
 
 </div>
 
 <div class="footer">
-<a href="https://www.youtube.com/watch?v=mScpHTIi-kM" target="_blank">369</a>
+<a href="https://truthby4.com" target="_blank">369</a>
 </div>
 
 </body>
